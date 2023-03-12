@@ -11,12 +11,12 @@ OBS: utilize a plataforma de API que você preferir. */
 const express = require('express');
 const app = express();
 
+app.use(express.json());
+
 
 app.listen(3000, function() {
   console.log('Servidor rodando na porta 3000');
 });
-
-app.use(express.json());
 
 
 app.post('/:objeto', function(req, res) {
