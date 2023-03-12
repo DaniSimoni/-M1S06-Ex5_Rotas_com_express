@@ -19,7 +19,12 @@ app.listen(3000, function() {
 app.use(express.json());
 
 
-app.get('/:objeto', function(req, res) {
-  res.json({ nome: 'Tom', idade: 10, id: "tomdog1" })
+app.post('/:objeto', function(req, res) {
+  const objeto = req.body;
+
+  res.json(objeto);
+  console.log(objeto)
 })
+
+
 
